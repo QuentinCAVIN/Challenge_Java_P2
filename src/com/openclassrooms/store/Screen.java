@@ -1,15 +1,38 @@
 package com.openclassrooms.store;
 
-public class Screen {
+public class Screen extends ComputerArticle {
 
-    public String brand;
-    public double price;
     public String resolution;
 
-    public Screen(String brand, double price, String resolution) {
-        this.brand = brand;
-        this.price = price;
+    public Screen(Brand brand, double price, String resolution) {
+        super(brand, price);
         this.resolution = resolution;
+        // TODO Auto-generated constructor stub
     }
 
 }
+// Idem que pour screen, la solution ci-dessous
+/*
+ * public class Screen extends Item {
+ * 
+ * private String resolution;
+ * 
+ * public String getResolution() {
+ * return resolution;
+ * }
+ * 
+ * public void setResolution(String resolution) {
+ * this.resolution = resolution;
+ * }
+ * 
+ * public Screen(Brand brand, double price, String resolution) {
+ * super(brand, price);
+ * this.resolution = resolution;
+ * }
+ * 
+ * @Override
+ * public String toString() {
+ * return "Screen{" + super.toString() +
+ * ", resolution='" + resolution + '\'' +
+ * '}';
+ */
